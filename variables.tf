@@ -1,16 +1,21 @@
-# Параметры облачного образа
-variable "image" {
-  type = object({
-    name = string
-    url  = string
-  })
+variable "system_uri" {
+  type = string
+  default = "qemu:///system"
 }
 
-# Параметры виртуальной машины
-variable "vm" {
-  type = object({
-    cpu    = number
-    ram    = number
-    disk   = number
-  })
+variable "default_pool_path" {
+  type = string
+  default = "/home/andrey/kvm"
+}
+
+variable "domains" {
+  type = list
+  default = [
+    {
+      hostname = "management"
+      memory = "1024"
+      vcpu = 1
+      address = "192.168.123.3"
+    }
+  ]
 }

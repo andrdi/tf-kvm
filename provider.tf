@@ -8,6 +8,5 @@ terraform {
 }
 
 provider "libvirt" {
-  uri = "qemu:///system"
-  # uri = "qemu+ssh://<my-kvm-host>/system"
+  uri = var.system_uri
 }

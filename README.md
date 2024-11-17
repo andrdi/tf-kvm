@@ -20,3 +20,6 @@ $ terraform import libvirt_network.default ee8c6c00-6f33-41f5-84eb-c6679a745f91
 ```
 qemu-img resize noble-server-cloudimg-amd64.img 30G
 ```
+
+Red Hat Enterprise Linux 9.5 KVM Guest Image
+https://access.redhat.com/downloads/content/479/ver=/rhel---9/9.5/x86_64/product-software
