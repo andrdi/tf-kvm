@@ -1,0 +1,20 @@
+#system_uri = "qemu+ssh://<my-kvm-host>/system"
+
+default_pool_path = "/home/user/kvm"
+
+image_source = "/home/user/install/iso/rhel-9.5-x86_64-kvm.qcow2"
+
+domains = [
+    {
+      hostname = "management"
+      memory = "1024"
+      vcpu = 1
+      address = "192.168.123.3"
+    },
+    {
+      hostname = "app"
+      memory = "1024"
+      vcpu = 1
+      address = "192.168.123.4"
+    }
+]

@@ -5,7 +5,12 @@ variable "system_uri" {
 
 variable "default_pool_path" {
   type = string
-  default = "/home/andrey/kvm"
+  default = "/home/user/kvm"
+}
+
+variable "image_source" {
+  type = string
+  default = "/home/user/install/iso/rhel-9.5-x86_64-kvm.qcow2"
 }
 
 variable "domains" {

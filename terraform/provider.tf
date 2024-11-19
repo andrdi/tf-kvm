@@ -4,6 +4,11 @@ terraform {
       source  = "dmacvicar/libvirt"
       version = "~> 0.6.14"
     }
+
+    local = {
+      source = "hashicorp/local"
+      version = ">= 2.0.0"
+    }
   }
 }
 
