@@ -4,9 +4,11 @@ resource "local_file" "inventory" {
 
   content = templatefile("${path.module}/inventory.tpl", {
     allrecords = libvirt_domain.internal_domains[*]
+    #allrecords = libvirt_domain.internal_domains
   })
 
 #   provisioner "local-exec" {
 #     command = "ANSIBLE_CONFIG=${path.module}/../ansible/ansible.cfg ansible-playbook ${path.module}/../ansible/site.yml"
 #   }
+  depends_on = [libvirt_domain.internal_domains]
 }
